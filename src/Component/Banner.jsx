@@ -38,6 +38,7 @@ const Banner = () => {
     <div className='max-w-[1110px] mx-auto text-[#E9E9E9] mb-10 '>
         <hr />
     </div>
+    <h1 className='text-[24px] text-[#1F2937] font-semibold max-w-[1110px] mx-auto '>Your Friends</h1>
 
 
 

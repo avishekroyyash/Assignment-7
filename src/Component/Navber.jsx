@@ -7,9 +7,9 @@ const Navber = () => {
         <div className='flex justify-between items-center max-w-400 mx-auto border-b px-20 py-3 bg-[#FFFFFF]'>
         <img src={navlogo} alt="navlogo" />
         <div className='flex gap-10'>
-        <button className='flex gap-2 font-semibold'><House></House>Home</button>
-        <button className='flex gap-2 font-semibold'><Clock></Clock>Timeline</button>
-        <button className='flex gap-2 font-semibold'> <ChartNoAxesCombined></ChartNoAxesCombined> Stats</button>
+        <NavLink to='/' className={(obj)=> ` flex gap-2 font-semibold p-2 ${obj.isActive && 'bg-green-900  text-white rounded-md '}`}><House></House>Home</NavLink>
+        <NavLink to='/timeline' className={(obj)=> ` flex gap-2 font-semibold p-2 ${obj.isActive && 'bg-green-900  text-white rounded-md '}`}><Clock></Clock>Timeline</NavLink>
+        <NavLink to='/stats' className={(obj)=> ` flex gap-2 font-semibold p-2 ${obj.isActive && 'bg-green-900  text-white rounded-md '}`}> <ChartNoAxesCombined></ChartNoAxesCombined> Stats</NavLink>
         </div>   
         </div>
     );
