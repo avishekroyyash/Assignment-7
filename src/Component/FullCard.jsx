@@ -5,15 +5,16 @@ import call from '../assets/call.png';
 import text from '../assets/text.png';
 import video from '../assets/video.png';
 import { useParams } from 'react-router';
-import { useEffect, useState } from 'react';
-
+import { useContext, useEffect, useState } from 'react';
+import { SocialContex } from '../Contex/ContextProvider';
+import { toast } from 'react-toastify';
 
 
 const FullCard = () => {
      
      // id will be come from react router .
         const {id} = useParams();
-        console.log(id,'id asr kota ')
+        // console.log(id,'id asr kota ')
          
              const [loading,setLoading] = useState(true);
              const [FriendData , setFriendData] = useState([])
@@ -27,10 +28,10 @@ const FullCard = () => {
                 }
                 fetchData();
              },[])
-            console.log(FriendData,FriendData )
+            // console.log(FriendData,FriendData )
     
         const ExistData = FriendData.find(item => item.id == id)
-        console.log(ExistData,'Exist data ')
+        // console.log(ExistData,'Exist data ')
 
         if(loading){
             return(
@@ -40,13 +41,37 @@ const FullCard = () => {
 
        const{name,picture,tags,status,email,days_since_contact,bio,goal,next_due_date} = ExistData
 
+       //use context api to take the data of social like(call,text,video)
+        const {social,setSocial} = useContext(SocialContex);
+        //  console.log(social,'social media call ,text,video')
+    
+       // handle onclike
+       const handleSocial = (type,userDetails)=>{
+        const newData = {
+           ...userDetails,
+           click:type,
+           time: new Date().toLocaleDateString()
+        }
+        setSocial([...social,newData]);
+        // console.log(type,'handle social')
+        if(newData.click=='Text'){
+            toast('click on the text')
+        }
+        else if( newData.click == 'Call'){
+            toast('click on the call')
+        }
+        else {
+            toast('click on the video')
+        }
+       } 
+       
     return (
         <div className='grid grid-cols-4 grid-rows-9 gap-3 mt-5 max-w-277.5 mx-auto '>
 
             <div className=' shadow-xl border-2 border-gray-200 rounded-2xl row-span-6'>
                   <div className='bg-white rounded-2xl  text-center space-y-2  p-6 '>
                              <div>
-                                 <img className=' rounded-full p-5 mx-auto' src={picture} alt="pic" />
+                                 <img className='rounded-full p-5 mx-auto' src={picture} alt="pic" />
                              </div>
                              <h1 className='font-semibold text-[20px]'>{name}</h1>
                              <p className='text-[#64748B] text-[12px] ' >62d ago</p>
@@ -108,19 +133,21 @@ const FullCard = () => {
              <h1 className='flex justify-center items-center py-3 gap-1'> <BellMinus></BellMinus>Snooze 2 weeks</h1>
             </div>
 
+ {/* this is the functional section  */}
+
             <div className='shadow-md border-2 border-gray-200 rounded-2xl col-span-3 row-span-3'>
                 <h1 className='text-[20px] text-[#244D3F]font-medium pt-5 pl-5'>Quick Check-In</h1>
                 <div className='grid grid-cols-3 gap-5 mt-4 px-5'>
 
-                <div className='flex justify-center items-center bg-[#E9E9E9] rounded-xl flex-col space-y-2 p-3 hover:bg-gray-300 '>
+                <div onClick={()=>handleSocial('Call',ExistData)} className='flex justify-center items-center bg-[#E9E9E9] rounded-xl flex-col space-y-2 p-3 hover:bg-gray-300 '>
                     <img src={call} alt="call" />
                     <p>Call</p>
                 </div>
-                <div className='flex justify-center items-center bg-[#E9E9E9] rounded-xl flex-col space-y-2 p-3 hover:bg-gray-300 '>
+                <div onClick={()=>handleSocial('Text',ExistData)} className='flex justify-center items-center bg-[#E9E9E9] rounded-xl flex-col space-y-2 p-3 hover:bg-gray-300 '>
                     <img src={text} alt="text" />
                     <p>Text</p>
                 </div>
-                <div className='flex justify-center items-center bg-[#E9E9E9] rounded-xl flex-col space-y-2 p-3 hover:bg-gray-300 '>
+                <div onClick={()=>handleSocial('Video',ExistData)} className='flex justify-center items-center bg-[#E9E9E9] rounded-xl flex-col space-y-2 p-3 hover:bg-gray-300 '>
                     <img src={video} alt="video" />
                     <p>Video</p>
                 </div>
