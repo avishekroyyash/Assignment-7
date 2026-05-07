@@ -24,7 +24,7 @@ const Stats = () => {
 
             <div className='max-w-277.5 mx-auto mb-15'>
                 <h2 className='text-2xl text-green-900 font-medium mb-15'>By Interaction Type</h2>
-                 <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 ,marginLeft:'300px' }} responsive>
+                 <PieChart className='md:ml-[160px] lg:ml-[300px] ' style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1  }} responsive>
       <Pie
         data={data}
         innerRadius="80%"

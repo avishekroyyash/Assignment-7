@@ -14,7 +14,7 @@ const Banner = () => {
     {/* Banner Card */}
     
     <div>
-        <div className='grid grid-cols-4 max-w-[1110px] mx-auto mt-10 mb-10 gap-4'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-4 lg:max-w-[1110px] mx-auto mt-10 mb-10 lg:gap-4'>
             <div className=' shadow-2xl text-center p-8 '>
                 <h1 className='text-[#244D3F] font-semibold text-4xl '>10</h1>
                 <h4 className='text-[#64748B] text-[18px] '>Total Friends</h4>

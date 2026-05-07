@@ -55,20 +55,20 @@ const FullCard = () => {
         setSocial([...social,newData]);
         // console.log(type,'handle social')
         if(newData.click=='Text'){
-            toast('click on the text')
+            toast.success('clicked on the text')
         }
         else if( newData.click == 'Call'){
-            toast('click on the call')
+            toast.success('clicked on the call')
         }
         else {
-            toast('click on the video')
+            toast.success('clicked on the video')
         }
        } 
        
     return (
-        <div className='grid grid-cols-4 grid-rows-9 gap-3 mt-5 max-w-277.5 mx-auto '>
+        <div className='grid lg:grid-cols-4 lg:grid-rows-9 gap-3 mt-5 lg:max-w-277.5 mx-auto '>
 
-            <div className=' shadow-xl border-2 border-gray-200 rounded-2xl row-span-6'>
+            <div className=' shadow-xl border-2 border-gray-200 rounded-2xl lg:row-span-6 row-span-2'>
                   <div className='bg-white rounded-2xl  text-center space-y-2  p-6 '>
                              <div>
                                  <img className='rounded-full p-5 mx-auto' src={picture} alt="pic" />
@@ -106,23 +106,23 @@ const FullCard = () => {
        
             </div>
 
-            <div className='shadow-md border-2 border-gray-200  flex justify-center items-center flex-col rounded-2xl row-span-3 '>
+            <div className='shadow-md border-2 border-gray-200  flex justify-center items-center flex-col rounded-2xl lg:row-span-3 '>
              <h1 className='text-[30px] font-semibold text-[#244D3F]'>{days_since_contact}</h1> 
              <p className='text-[18px] text-[#64748B]'>Days Since Contact</p>
             </div>
 
-            <div className='shadow-md border-2 border-gray-200 flex justify-center items-center flex-col rounded-2xl row-span-3'>
+            <div className='shadow-md border-2 border-gray-200 flex justify-center items-center flex-col rounded-2xl lg:row-span-3 '>
               <h1 className='text-[30px] font-semibold text-[#244D3F]'>{goal}</h1> 
              <p className='text-[18px] text-[#64748B]'>Goal (Days)</p>
             </div>
 
-            <div className='shadow-md border-2 border-gray-200 flex justify-center items-center flex-col rounded-2xl row-span-3'>
+            <div className='shadow-md border-2 border-gray-200 flex justify-center items-center flex-col rounded-2xl lg:row-span-3 '>
                     <h1 className='text-[30px] font-semibold text-[#244D3F]'>{next_due_date}</h1> 
              <p className='text-[18px] text-[#64748B]'>Next Due</p>
             </div>
 
             <div className=' col-span-3 row-span-3 shadow-md border-2 border-gray-200 rounded-2xl'>
-                <div className='flex justify-between px-10 pt-15'>
+                <div className='flex justify-between px-10 lg:pt-15 pt-2'>
                     <h1 className='text-[20px] text-[#244D3F]' >Relationship Goal</h1>
                     <button className='btn'>Edit</button>
                 </div>

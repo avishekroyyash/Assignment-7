@@ -26,7 +26,7 @@ const HomePage = () => {
            
             {
                 loading ? (<span className="loading loading-dots loading-xl p-15 ml-10"></span>) :
-                (  <div className='grid grid-cols-4 gap-3 max-w-277.5 mx-auto'> 
+                (  <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-3 max-w-277.5 mx-auto'> 
                 {
                     FriendData.map((item,index )=> <SingleCard key={index} item={item}></SingleCard>  )
                 }

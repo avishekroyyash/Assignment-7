@@ -16,17 +16,22 @@ export const router = createBrowserRouter([
             index:true , Component:HomePage
         },
         {
-            path:'/:id', Component:FullCard 
-        },
-        {
             path:'timeline', Component:TimeLine
         },
         {
             path:'stats', Component:Stats
         },
         {
-             path:'*', Component:Error 
-         }
+  path:'/:id',
+  Component:FullCard,
+  errorElement:<Error />
+}
+        //  {
+        //     path:'/:id', Component:FullCard 
+        // },
+        // {
+        //      path:'*', Component:Error 
+        //  }
     ]
 }
 
