@@ -10,7 +10,7 @@ const Stats = () => {
         const callCount = socialTypeData.filter(item => item.click === 'Call' ).length
          const textCount = socialTypeData.filter(item => item.click === 'Text' ).length
           const videoCount = socialTypeData.filter(item => item.click === 'Video' ).length
-        console.log(socialTypeData,'click on data ')
+        // console.log(socialTypeData,'click on data ')
         const data = [
   { name: 'Text', value: textCount, fill: '#0088FE' },
   { name: 'Call', value: callCount, fill: '#00C49F' },

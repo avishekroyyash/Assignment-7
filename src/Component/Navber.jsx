@@ -4,7 +4,7 @@ import { NavLink } from 'react-router';
 import navlogo from '../assets/logo.png'
 const Navber = () => {
     return (
-        <div className=' flex justify-between md:gap-50 lg:gap-50 gap-20 items-center max-w-400 mx-auto md:border-b lg:border-b md:px-20 lg:px-20 px-5 py-3 bg-[#FFFFFF] '>
+        <div className=' flex justify-between md:gap-50 lg:gap-150 gap-20 items-center max-w-400 mx-auto md:border-b lg:border-b md:px-20 lg:px-20 px-5 py-3 bg-[#FFFFFF] '>
         <img src={navlogo} alt="navlogo" />
         <div className='md:flex lg:flex gap-5 hidden'>
         <NavLink to='/' className={(obj)=> ` flex gap-2 font-semibold p-2 ${obj.isActive && 'bg-green-900  text-white rounded-md '}`}><House></House>Home</NavLink>

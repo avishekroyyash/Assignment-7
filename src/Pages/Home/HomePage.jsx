@@ -1,7 +1,7 @@
-import React, { Suspense, use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../../Component/Banner';
 import SingleCard from '../../Component/SingleCard';
-import { Heading1 } from 'lucide-react';
+
 
 // const FriendPromise = fetch('../../../public/friend.json').then(res => res.json());
 
@@ -11,7 +11,7 @@ const HomePage = () => {
     // const FriendData = use(FriendPromise)
      useEffect(()=>{
         const fetchData = async()=>{
-         const res = await fetch('../../../public/friend.json');
+         const res = await fetch('/friend.json');
          const data = await res.json();
          setFriendData(data);
          setLoading(false)

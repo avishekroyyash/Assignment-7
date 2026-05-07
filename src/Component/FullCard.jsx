@@ -21,7 +21,7 @@ const FullCard = () => {
       
              useEffect(()=>{
                 const fetchData = async()=>{
-                 const res = await fetch('../../../public/friend.json');
+                 const res = await fetch('/friend.json');
                  const data = await res.json();
                  setFriendData(data);
                  setLoading(false)
