@@ -1,5 +1,4 @@
 
-import callpic from '../assets/call.png'
 import { Archive, BellMinus, Trash } from 'lucide-react';
 import call from '../assets/call.png';
 import text from '../assets/text.png';

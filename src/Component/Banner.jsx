@@ -5,7 +5,7 @@ const Banner = () => {
     return (
    <div>
     {/* banner head */}
-     <div className='max-w-[1110px] mx-auto mt-10 text-center'>
+     <div className='max-w-277.5 mx-auto mt-10 text-center'>
          <h1 className='font-bold text-5xl mb-4'>Friends to keep close in your life</h1>
          <p className='text-[#64748B] mb-8'>Your personal shelf of meaningful connections. Browse, tend, and nurture the <br />
         relationships that matter most.</p>
@@ -14,7 +14,7 @@ const Banner = () => {
     {/* Banner Card */}
     
     <div>
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 lg:max-w-[1110px] mx-auto mt-10 mb-10 lg:gap-4'>
+        <div className='grid md:grid-cols-2 lg:grid-cols-4 lg:max-w-277.5 mx-auto mt-10 mb-10 lg:gap-4'>
             <div className=' shadow-2xl text-center p-8 '>
                 <h1 className='text-[#244D3F] font-semibold text-4xl '>10</h1>
                 <h4 className='text-[#64748B] text-[18px] '>Total Friends</h4>
@@ -35,15 +35,10 @@ const Banner = () => {
     </div>
     {/* Break line */}
     
-    <div className='max-w-[1110px] mx-auto text-[#E9E9E9] mb-10 '>
+    <div className='max-w-277.5 mx-auto text-[#E9E9E9] mb-10 '>
         <hr />
     </div>
-    <h1 className='text-[24px] text-[#1F2937] font-semibold max-w-[1110px] mx-auto '>Your Friends</h1>
-
-
-
-
-
+    <h1 className='text-[24px] text-[#1F2937] font-semibold max-w-277.5 mx-auto '>Your Friends</h1>
 
    </div>
     );

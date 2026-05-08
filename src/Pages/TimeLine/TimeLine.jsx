@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { SocialContex } from '../../Contex/ContextProvider';
-import { ArrowDown, Heading1 } from 'lucide-react';
+import { ArrowDown} from 'lucide-react';
 import call from '../../assets/call.png';
 import text from '../../assets/text.png';
 import video from '../../assets/video.png';

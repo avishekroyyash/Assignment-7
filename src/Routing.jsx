@@ -22,10 +22,10 @@ export const router = createBrowserRouter([
             path:'stats', Component:Stats
         },
         {
-  path:'/:id',
-  Component:FullCard,
-  errorElement:<Error />
-}
+          path:'/:id',
+           Component:FullCard,
+            errorElement:<Error />
+        }
         //  {
         //     path:'/:id', Component:FullCard 
         // },

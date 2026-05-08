@@ -1,5 +1,4 @@
 import React from 'react';
-import callpic from '../assets/call.png'
 import { Link } from 'react-router';
 const SingleCard = ({item}) => {
     //  console.log(item,'itemasddddddddddddd')
